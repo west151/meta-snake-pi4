@@ -13,8 +13,6 @@ PR = "r1"
 
 SRCREV = "${AUTOREV}"
 SRC_URI = "git://github.com/west151/info-panel.git"
-#SRC_URI[md5sum] = "7006309d30bf82eaa470d49ddec57f58"
-#SRC_URI[sha256sum] = "e9ca66c67e32db58ba382c12037c63a0ed1957e342111fffba9cda89167eeea1"
 
 S = "${WORKDIR}/git"
 
