@@ -91,7 +91,11 @@ TSLIB_DEV = " \
 SDR = " \
     asn1c \
     libfftwf \
+    fftw-dev \
+    libhackrf \
+    rtl-sdr \   
     info-panel \
+    qsweep-srv \
 "
 
 OPENMP = " \
