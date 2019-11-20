@@ -12,12 +12,9 @@ SRC_URI = "git://github.com/west151/qsweep.git"
 
 S = "${WORKDIR}/git"
 
-require recipes-qt/qt5/qt5.inc
-
 QMAKE_PROFILES = "${S}/qsweep-srv.pro"
 
-qmake_base() {
-}
+inherit qmake5
 
 do_install() {
     install -d ${D}${bindir}
@@ -27,5 +24,3 @@ do_install() {
 FILES_${PN} = " \
     ${bindir} \
 "
-
-RDEPENDS_${PN} = "qtbase-plugins"
