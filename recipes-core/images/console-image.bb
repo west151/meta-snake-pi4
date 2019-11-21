@@ -36,6 +36,7 @@ TOOLS_INSTALL = " \
     mc \
     htop \
     tcpdump \
+    usbutils \
 "
 
 DEV_SDK_INSTALL = " \
@@ -96,6 +97,18 @@ SDR = " \
     rtl-sdr \   
     info-panel \
     qsweep-srv \
+"
+
+GPS = " \
+    pps-tools \
+"
+
+AIRNET = " \
+    crda \
+    iw \
+    linux-firmware-rpidistro-bcm43430 \
+    linux-firmware-rpidistro-bcm43455 \
+    wpa-supplicant \
 "
 
 OPENMP = " \
@@ -196,6 +209,8 @@ IMAGE_INSTALL += " \
     ${TSLIB} \
     ${TSLIB_DEV} \
     ${SDR} \
+    ${GPS} \
+    ${AIRNET} \
     ${OPENMP} \
     ${OPENMP_DEV} \
     ${MQTT} \
