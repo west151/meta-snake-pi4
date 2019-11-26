@@ -12,6 +12,8 @@ MACHINE ??= "raspberrypi4"
 #IMAGE_FSTYPES ?= "tar.bz2 ext3 rpi-sdimg"
 IMAGE_FSTYPES ?= "rpi-sdimg"
 
+DISTRO_FEATURES_append += "bluez5"
+
 # remove
 DISTRO_FEATURES_remove = "x11"
 
