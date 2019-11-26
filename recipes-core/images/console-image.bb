@@ -37,6 +37,7 @@ TOOLS_INSTALL = " \
     htop \
     tcpdump \
     usbutils \
+    pi-bluetooth \
 "
 
 DEV_SDK_INSTALL = " \
@@ -95,8 +96,8 @@ SDR = " \
     fftw-dev \
     libhackrf \
     rtl-sdr \   
-    info-panel \
     qsweep-srv \
+    info-panel \
 "
 
 GPS = " \
@@ -175,6 +176,8 @@ QT5_DEV_PKGS = " \
     qtxmlpatterns-mkspecs \
     qtserialport-dev \
     qtserialport-mkspecs \
+    qtsystems-dev \
+    qtsystems-mkspecs \
     qtmqtt-dev \
     qtmqtt-mkspecs \
 "
@@ -186,16 +189,20 @@ QT5_PKGS = " \
     qtgraphicaleffects \
     qtlocation-plugins \
     qtmultimedia \
+    qtmultimedia-plugins \
     qtquickcontrols2 \
     qtsensors-plugins \
     qtserialbus \
+    qtserialport \
+    qtsystems \
     qtsvg \
     qtwebsockets-qmlplugins \
     qtvirtualkeyboard \
     qtxmlpatterns \
-    qtserialport \
     qtmqtt \
     qtwayland-plugins \
+    qtimageformats \
+    qtimageformats-plugins \
 "
 
 IMAGE_INSTALL += " \
