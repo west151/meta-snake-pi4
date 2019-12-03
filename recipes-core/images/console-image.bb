@@ -180,6 +180,16 @@ QT5_DEV_PKGS = " \
     qtsystems-mkspecs \
     qtmqtt-dev \
     qtmqtt-mkspecs \
+    qtremoteobjects-dev \
+    qtremoteobjects-mkspecs \
+    qtpurchasing-dev \
+    qtpurchasing-mkspecs \
+    qtgamepad-dev \
+    qtgamepad-mkspecs \
+    qtlottie-dev \
+    qtlottie-mkspecs \
+    qtcoap-dev \
+    qtcoap-mkspecs \
 "
 QT5_PKGS = " \
     qtcharts \
@@ -203,6 +213,12 @@ QT5_PKGS = " \
     qtwayland-plugins \
     qtimageformats \
     qtimageformats-plugins \
+    qtremoteobjects \
+    qtpurchasing \
+    qtgamepad \
+    qtlottie \
+    qtcoap \
+    qtwebglplugin \
 "
 
 IMAGE_INSTALL += " \
