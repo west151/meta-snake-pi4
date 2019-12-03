@@ -14,6 +14,10 @@ CORE_OS = " \
     tzdata \
 "
 
+TOOLS_MULTIMEDIA = " \
+    omxplayer \
+"
+
 TOOLS_INSTALL = " \
     bzip2 \
     devmem2 \
@@ -243,6 +247,7 @@ IMAGE_INSTALL += " \
     ${QT5_DEV_PKGS} \
     ${QT5_PKGS} \
     ${PYTHON_UTILS} \
+    ${TOOLS_MULTIMEDIA} \
 "
 
 set_local_timezone() {
