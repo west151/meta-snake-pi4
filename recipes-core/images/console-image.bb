@@ -16,6 +16,7 @@ CORE_OS = " \
 
 TOOLS_MULTIMEDIA = " \
     omxplayer \
+    ffmpeg \
 "
 
 TOOLS_INSTALL = " \
@@ -186,8 +187,6 @@ QT5_DEV_PKGS = " \
     qtmqtt-mkspecs \
     qtremoteobjects-dev \
     qtremoteobjects-mkspecs \
-    qtpurchasing-dev \
-    qtpurchasing-mkspecs \
     qtgamepad-dev \
     qtgamepad-mkspecs \
     qtlottie-dev \
@@ -218,7 +217,6 @@ QT5_PKGS = " \
     qtimageformats \
     qtimageformats-plugins \
     qtremoteobjects \
-    qtpurchasing \
     qtgamepad \
     qtlottie \
     qtcoap \

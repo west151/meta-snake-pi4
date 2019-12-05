@@ -16,9 +16,6 @@ USE_QT = " \
     qtremoteobjects \
     qtremoteobjects-dev \
     qtremoteobjects-mkspecs \
-    qtpurchasing \
-    qtpurchasing-dev \
-    qtpurchasing-mkspecs \
     qtgamepad \
     qtgamepad-dev \
     qtgamepad-mkspecs \
