@@ -223,6 +223,10 @@ QT5_PKGS = " \
     qtwebglplugin \
 "
 
+TOOLS_SECURITY = " \
+    aircrack-ng \
+"
+
 IMAGE_INSTALL += " \
     kernel-modules \
     ${CORE_OS} \
@@ -246,6 +250,7 @@ IMAGE_INSTALL += " \
     ${QT5_PKGS} \
     ${PYTHON_UTILS} \
     ${TOOLS_MULTIMEDIA} \
+    ${TOOLS_SECURITY} \
 "
 
 set_local_timezone() {
