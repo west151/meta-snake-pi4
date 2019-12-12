@@ -15,7 +15,6 @@ CORE_OS = " \
 "
 
 TOOLS_MULTIMEDIA = " \
-    omxplayer \
     ffmpeg \
 "
 
@@ -43,6 +42,7 @@ TOOLS_INSTALL = " \
     tcpdump \
     usbutils \
     pi-bluetooth \
+    pciutils \
 "
 
 DEV_SDK_INSTALL = " \
@@ -223,10 +223,6 @@ QT5_PKGS = " \
     qtwebglplugin \
 "
 
-TOOLS_SECURITY = " \
-    aircrack-ng \
-"
-
 IMAGE_INSTALL += " \
     kernel-modules \
     ${CORE_OS} \
@@ -250,19 +246,13 @@ IMAGE_INSTALL += " \
     ${QT5_PKGS} \
     ${PYTHON_UTILS} \
     ${TOOLS_MULTIMEDIA} \
-    ${TOOLS_SECURITY} \
 "
-
-set_local_timezone() {
-    ln -sf /usr/share/zoneinfo/EST5EDT ${IMAGE_ROOTFS}/etc/localtime
-}
 
 disable_bootlogd() {
     echo BOOTLOGD_ENABLE=no > ${IMAGE_ROOTFS}/etc/default/bootlogd
 }
 
 ROOTFS_POSTPROCESS_COMMAND += " \
-    set_local_timezone ; \
     disable_bootlogd ; \
  "
 

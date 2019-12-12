@@ -12,6 +12,9 @@ VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
 # Add virtualization support
 #DISTRO_FEATURES_append = " virtualization aufs kvm"
 
+# timezone
+DEFAULT_TIMEZONE = "Europe/Moscow"
+
 # kernel
 PREFERRED_VERSION_linux-raspberrypi = "4.19.%"
 
