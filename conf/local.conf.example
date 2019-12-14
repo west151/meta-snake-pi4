@@ -15,6 +15,9 @@ VIRTUAL-RUNTIME_init_manager = "sysvinit"
 # timezone
 DEFAULT_TIMEZONE = "Europe/Moscow"
 
+# psplash
+IMAGE_INSTALL_append = " psplash"
+
 # kernel
 PREFERRED_VERSION_linux-raspberrypi = "4.19.%"
 
