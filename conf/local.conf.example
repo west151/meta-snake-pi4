@@ -47,8 +47,11 @@ ENABLE_UART = "1"
 RPI_USE_U_BOOT = "1"
 
 # passed to make so setting it to “-j X”
+#PARALLEL_MAKE ?= "-j ${@oe.utils.cpu_count()}"
 PARALLEL_MAKE ?= "-j 2"
+
 # BitBake threads used to run tasks such as do_fetch, do_configure, do_compile etc
+#B_NUMBER_THREADS ?= "${@oe.utils.cpu_count()}"
 BB_NUMBER_THREADS ?= "4"
 
 DL_DIR ?= "${TOPDIR}/downloads"
