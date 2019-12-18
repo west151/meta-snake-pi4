@@ -6,6 +6,8 @@ include recipes-core/images/core-image-minimal.bb
 
 IMAGE_FEATURES += "package-management"
 IMAGE_LINGUAS = "en-us ru-ru"
+LICENSE_FLAGS_WHITELIST_append = " commercial_gstreamer1.0-plugins-ugly "
+LICENSE_FLAGS_WHITELIST_append = " commercial_mpg123 "
 
 CORE_OS = " \
     openssh \
@@ -16,6 +18,14 @@ CORE_OS = " \
 
 TOOLS_MULTIMEDIA = " \
     ffmpeg \
+    opencv \
+    opencv-samples \
+    v4l-utils \
+    gstreamer1.0-plugins-good \
+    gstreamer1.0-plugins-base \
+    gstreamer1.0-plugins-ugly \
+    gstreamer1.0-plugins-bad \
+    gstreamer1.0-libav \
 "
 
 TOOLS_INSTALL = " \
