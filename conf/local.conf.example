@@ -27,12 +27,14 @@ MACHINE ??= "raspberrypi4"
 # disable splash
 DISABLE_SPLASH = "1"
 
+# video camera support
+VIDEO_CAMERA = "1"
+
 # disable boot logo
 DISABLE_RPI_BOOT_LOGO = "1"
 
 # HDMI 0 (from recipes-bsp/rpi-config_git.bbappend)
 CONFIG_HDMI_0 = "1"
-
 
 #IMAGE_FSTYPES ?= "tar.bz2 ext3 rpi-sdimg"
 IMAGE_FSTYPES ?= "rpi-sdimg"
@@ -42,7 +44,8 @@ DISTRO_FEATURES_append += "bluez5"
 # remove
 DISTRO_FEATURES_remove = "x11"
 
-GPU_MEM = "256"
+# size memory GPU for Raspberry Pi
+GPU_MEM = "128"
 ENABLE_UART = "1"
 RPI_USE_U_BOOT = "1"
 
