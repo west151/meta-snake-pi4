@@ -25,6 +25,8 @@ USE_QT = " \
     qtcoap \
     qtcoap-dev \
     qtcoap-mkspecs \
+    qtvirtualkeyboard \
+    qtvirtualkeyboard-dev \
 "
 
 RDEPENDS_${PN}_remove = " \
