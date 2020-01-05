@@ -18,10 +18,12 @@ DEFAULT_TIMEZONE = "Europe/Moscow"
 # psplash
 IMAGE_INSTALL_append = " psplash"
 
-# kernel
-PREFERRED_VERSION_linux-raspberrypi = "4.19.%"
+# kernel:
+#  - rt_4.19.%
+#  - 5.1.%
+PREFERRED_VERSION_linux-raspberrypi = "5.1.%"
 
-# This sets the default machine to be qemux86-64 if no other machine is selected:
+# This sets machine:
 MACHINE ??= "raspberrypi4"
 
 # disable splash
