@@ -21,7 +21,8 @@ IMAGE_INSTALL_append = " psplash"
 # kernel:
 #  - rt_4.19.%
 #  - 5.1.%
-PREFERRED_VERSION_linux-raspberrypi = "5.1.%"
+#  - 5.2.%
+PREFERRED_VERSION_linux-raspberrypi = "5.3.%"
 
 # This sets machine:
 MACHINE ??= "raspberrypi4"
