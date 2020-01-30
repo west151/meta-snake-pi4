@@ -233,6 +233,11 @@ QT5_PKGS = " \
     qtwebglplugin \
 "
 
+SW_UPDATE = " \
+    swupdate \
+    swupdate-www \
+"
+
 IMAGE_INSTALL += " \
     kernel-modules \
     ${CORE_OS} \
@@ -256,6 +261,7 @@ IMAGE_INSTALL += " \
     ${QT5_PKGS} \
     ${PYTHON_UTILS} \
     ${TOOLS_MULTIMEDIA} \
+    ${SW_UPDATE} \
 "
 
 disable_bootlogd() {

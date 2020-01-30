@@ -17,4 +17,5 @@ BBLAYERS ?= " \
     ${HOME}/yocto-data/poky/meta-security \
     ${HOME}/yocto-data/poky/meta-qt5 \    
     ${HOME}/yocto-data/poky/meta-snake-pi4 \
-  "
+    ${HOME}/yocto-data/poky/meta-swupdate \
+"
