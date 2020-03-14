@@ -53,6 +53,7 @@ DISTRO_FEATURES_remove = "x11"
 GPU_MEM = "128"
 ENABLE_UART = "1"
 RPI_USE_U_BOOT = "1"
+ENABLE_I2C = "1"
 
 # passed to make so setting it to “-j X”
 #PARALLEL_MAKE ?= "-j ${@oe.utils.cpu_count()}"

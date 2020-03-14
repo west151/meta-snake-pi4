@@ -9,6 +9,11 @@ IMAGE_LINGUAS = "en-us ru-ru"
 LICENSE_FLAGS_WHITELIST_append = " commercial_gstreamer1.0-plugins-ugly "
 LICENSE_FLAGS_WHITELIST_append = " commercial_mpg123 "
 
+MODULES_FILES = " \
+    modules-files \
+    script-files \
+"
+
 CORE_OS = " \
     openssh \
     openssh-keygen \
@@ -21,7 +26,8 @@ TOOLS_MULTIMEDIA = " \
     opencv \
     opencv-samples \
     v4l-utils \
-    gstreamer1.0-plugins-good \
+    gstreamer1.0 \
+    gstreamer1.0-plugins-base \
     gstreamer1.0-plugins-base \
     gstreamer1.0-plugins-ugly \
     gstreamer1.0-plugins-bad \
@@ -110,9 +116,7 @@ SDR = " \
     libfftwf \
     fftw-dev \
     libhackrf \
-    rtl-sdr \   
-    qsweep-srv \
-    info-panel \
+    rtl-sdr \
 "
 
 GPS = " \
@@ -233,11 +237,6 @@ QT5_PKGS = " \
     qtwebglplugin \
 "
 
-SW_UPDATE = " \
-    swupdate \
-    swupdate-www \
-"
-
 IMAGE_INSTALL += " \
     kernel-modules \
     ${CORE_OS} \
@@ -261,7 +260,7 @@ IMAGE_INSTALL += " \
     ${QT5_PKGS} \
     ${PYTHON_UTILS} \
     ${TOOLS_MULTIMEDIA} \
-    ${SW_UPDATE} \
+    ${MODULES_FILES} \
 "
 
 disable_bootlogd() {
