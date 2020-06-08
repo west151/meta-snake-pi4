@@ -26,8 +26,11 @@ TOOLS_MULTIMEDIA = " \
     opencv \
     opencv-samples \
     v4l-utils \
+"
+
+MODULES_GSTREAMER = " \
     gstreamer1.0 \
-    gstreamer1.0-plugins-base \
+    gstreamer1.0-plugins-good \
     gstreamer1.0-plugins-base \
     gstreamer1.0-plugins-ugly \
     gstreamer1.0-plugins-bad \
@@ -117,6 +120,7 @@ SDR = " \
     fftw-dev \
     libhackrf \
     rtl-sdr \
+    info-panel \
 "
 
 GPS = " \
@@ -259,7 +263,6 @@ IMAGE_INSTALL += " \
     ${QT5_DEV_PKGS} \
     ${QT5_PKGS} \
     ${PYTHON_UTILS} \
-    ${TOOLS_MULTIMEDIA} \
     ${MODULES_FILES} \
 "
 

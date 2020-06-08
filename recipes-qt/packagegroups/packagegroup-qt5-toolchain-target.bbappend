@@ -27,6 +27,10 @@ USE_QT = " \
     qtcoap-mkspecs \
     qtvirtualkeyboard \
     qtvirtualkeyboard-dev \
+    libfftwf \
+    fftw-dev \
+    libhackrf \
+    rtl-sdr \
 "
 
 RDEPENDS_${PN}_remove = " \
