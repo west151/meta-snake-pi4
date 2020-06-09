@@ -6,8 +6,6 @@ include recipes-core/images/core-image-minimal.bb
 
 IMAGE_FEATURES += "package-management"
 IMAGE_LINGUAS = "en-us ru-ru"
-LICENSE_FLAGS_WHITELIST_append = " commercial_gstreamer1.0-plugins-ugly "
-LICENSE_FLAGS_WHITELIST_append = " commercial_mpg123 "
 
 MODULES_FILES = " \
     modules-files \
@@ -26,15 +24,6 @@ TOOLS_MULTIMEDIA = " \
     opencv \
     opencv-samples \
     v4l-utils \
-"
-
-MODULES_GSTREAMER = " \
-    gstreamer1.0 \
-    gstreamer1.0-plugins-good \
-    gstreamer1.0-plugins-base \
-    gstreamer1.0-plugins-ugly \
-    gstreamer1.0-plugins-bad \
-    gstreamer1.0-libav \
 "
 
 TOOLS_INSTALL = " \
@@ -86,7 +75,6 @@ DEV_SDK_INSTALL = " \
     make \
     perl-modules \
     pkgconfig \
-    python-modules \
 "
 
 I2C_TOOLS = " \
@@ -151,13 +139,8 @@ MQTT = " \
     mosquitto-clients \
 "
 
-PYTHON_UTILS = " \
-    python-distutils \
-"
-
 MQTT_DEV = " \
     mosquitto-dev \
-    python-paho-mqtt \
 "
 
 QT_TOOLS = " \
@@ -262,7 +245,6 @@ IMAGE_INSTALL += " \
     ${QT_DEV_TOOLS} \
     ${QT5_DEV_PKGS} \
     ${QT5_PKGS} \
-    ${PYTHON_UTILS} \
     ${MODULES_FILES} \
 "
 
