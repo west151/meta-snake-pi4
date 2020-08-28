@@ -24,7 +24,8 @@ IMAGE_INSTALL_append = " psplash"
 #  - 5.1.%
 #  - 5.2.%
 #  - 5.3.%
-PREFERRED_VERSION_linux-raspberrypi = "4.19.%"
+#  - 5.4.%
+PREFERRED_VERSION_linux-raspberrypi = "5.4.%"
 
 # This sets machine:
 MACHINE ??= "raspberrypi4"
@@ -56,12 +57,16 @@ RPI_USE_U_BOOT = "1"
 ENABLE_I2C = "1"
 
 # passed to make so setting it to “-j X”
-#PARALLEL_MAKE ?= "-j ${@oe.utils.cpu_count()}"
-PARALLEL_MAKE ?= "-j 2"
+PARALLEL_MAKE ?= "-j ${@oe.utils.cpu_count()}"
+#PARALLEL_MAKE ?= "-j 3"
 
 # BitBake threads used to run tasks such as do_fetch, do_configure, do_compile etc
-#B_NUMBER_THREADS ?= "${@oe.utils.cpu_count()}"
-BB_NUMBER_THREADS ?= "4"
+B_NUMBER_THREADS ?= "${@oe.utils.cpu_count()}"
+#BB_NUMBER_THREADS ?= "4"
+
+# Default parallelism and resource usage for xz
+XZ_MEMLIMIT ?= "95%"
+XZ_THREADS ?= "${@oe.utils.cpu_count(at_least=2)}"
 
 DL_DIR ?= "${TOPDIR}/downloads"
 SSTATE_DIR ?= "${TOPDIR}/sstate-cache"
