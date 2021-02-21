@@ -14,6 +14,7 @@ BBLAYERS ?= " \
   /home/user/yocto-data/raspberrypi4/poky/meta-openembedded/meta-networking \
   /home/user/yocto-data/raspberrypi4/poky/meta-openembedded/meta-python \
   /home/user/yocto-data/raspberrypi4/poky/meta-raspberrypi \
+  /home/user/yocto-data/raspberrypi4/poky/meta-security \
   /home/user/yocto-data/raspberrypi4/poky/meta-snake-pi4 \
   /home/user/yocto-data/raspberrypi4/poky/meta-qt5 \
 "
