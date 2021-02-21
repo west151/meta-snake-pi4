@@ -23,7 +23,7 @@ IMAGE_INSTALL_append = " psplash"
 PREFERRED_VERSION_linux-raspberrypi = "5.4.%"
 
 # This sets machine:
-MACHINE ??= "raspberrypi4"
+MACHINE ??= "raspberrypi4-64"
 
 # disable splash
 DISABLE_SPLASH = "1"
