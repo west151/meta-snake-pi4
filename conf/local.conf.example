@@ -1,13 +1,13 @@
 LICENSE_FLAGS_WHITELIST = "commercial"
 
 # sysvinit
-VIRTUAL-RUNTIME_init_manager = "sysvinit"
+#VIRTUAL-RUNTIME_init_manager = "sysvinit"
 
 # Switch to systemd
-#DISTRO_FEATURES_append = " systemd"
-#DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
-#VIRTUAL-RUNTIME_init_manager = "systemd"
-#VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
+DISTRO_FEATURES_append = " systemd"
+DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
+VIRTUAL-RUNTIME_init_manager = "systemd"
+VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
 
 # Add virtualization support
 #DISTRO_FEATURES_append = " virtualization aufs kvm"
@@ -19,11 +19,6 @@ DEFAULT_TIMEZONE = "Europe/Moscow"
 IMAGE_INSTALL_append = " psplash"
 
 # kernel:
-#  - 4.19.%
-#  - rt_4.19.%
-#  - 5.1.%
-#  - 5.2.%
-#  - 5.3.%
 #  - 5.4.%
 PREFERRED_VERSION_linux-raspberrypi = "5.4.%"
 
