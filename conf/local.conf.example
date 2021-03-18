@@ -19,8 +19,7 @@ DEFAULT_TIMEZONE = "Europe/Moscow"
 IMAGE_INSTALL_append = " psplash"
 
 # kernel:
-#  - 5.4.%
-PREFERRED_VERSION_linux-raspberrypi = "5.4.%"
+PREFERRED_VERSION_linux-raspberrypi = "5.10.%"
 
 # This sets machine:
 MACHINE ??= "raspberrypi4-64"
