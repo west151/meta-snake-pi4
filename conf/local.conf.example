@@ -16,7 +16,7 @@ VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
 DEFAULT_TIMEZONE = "Europe/Moscow"
 
 # psplash
-IMAGE_INSTALL_append = " psplash"
+#IMAGE_INSTALL_append = " psplash"
 
 # kernel:
 PREFERRED_VERSION_linux-raspberrypi = "5.10.%"

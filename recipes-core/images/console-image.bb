@@ -4,7 +4,7 @@ LICENSE = "MIT"
 
 include recipes-core/images/core-image-minimal.bb
 
-IMAGE_FEATURES += "package-management"
+IMAGE_FEATURES += "package-management splash"
 IMAGE_LINGUAS = "en-us ru-ru"
 
 MODULES_FILES = " \

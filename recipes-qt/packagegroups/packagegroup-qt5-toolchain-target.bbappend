@@ -9,6 +9,10 @@ USE_CHARTS = " \
     qtcharts-mkspecs \
 "
 
+DEV_TOOLS = " \
+    bcm2835-dev \
+"
+
 USE_QT = " \
     qtmqtt \
     qtmqtt-dev \
@@ -42,4 +46,5 @@ RDEPENDS_${PN}_remove = " \
 RDEPENDS_${PN} += " \
     ${USE_CHARTS} \
     ${USE_QT} \
+    ${DEV_TOOLS} \
 "
