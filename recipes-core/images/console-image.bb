@@ -4,14 +4,26 @@ LICENSE = "MIT"
 
 include recipes-core/images/core-image-minimal.bb
 
-IMAGE_FEATURES += "package-management"
+IMAGE_FEATURES += "package-management splash"
 IMAGE_LINGUAS = "en-us ru-ru"
+
+MODULES_FILES = " \
+    modules-files \
+    script-files \
+"
 
 CORE_OS = " \
     openssh \
     openssh-keygen \
     openssh-sftp-server \
     tzdata \
+"
+
+TOOLS_MULTIMEDIA = " \
+    ffmpeg \
+    opencv \
+    opencv-samples \
+    v4l-utils \
 "
 
 TOOLS_INSTALL = " \
@@ -37,6 +49,13 @@ TOOLS_INSTALL = " \
     htop \
     tcpdump \
     usbutils \
+    pi-bluetooth \
+    pciutils \
+    bcm2835-dev \
+    pi-blaster \
+    raspi-gpio \
+    rpi-gpio \
+    rpio \
 "
 
 DEV_SDK_INSTALL = " \
@@ -61,7 +80,6 @@ DEV_SDK_INSTALL = " \
     make \
     perl-modules \
     pkgconfig \
-    python-modules \
 "
 
 I2C_TOOLS = " \
@@ -94,9 +112,8 @@ SDR = " \
     libfftwf \
     fftw-dev \
     libhackrf \
-    rtl-sdr \   
+    rtl-sdr \
     info-panel \
-    qsweep-srv \
 "
 
 GPS = " \
@@ -127,13 +144,8 @@ MQTT = " \
     mosquitto-clients \
 "
 
-PYTHON_UTILS = " \
-    python-distutils \
-"
-
 MQTT_DEV = " \
     mosquitto-dev \
-    python-paho-mqtt \
 "
 
 QT_TOOLS = " \
@@ -175,8 +187,18 @@ QT5_DEV_PKGS = " \
     qtxmlpatterns-mkspecs \
     qtserialport-dev \
     qtserialport-mkspecs \
+    qtsystems-dev \
+    qtsystems-mkspecs \
     qtmqtt-dev \
     qtmqtt-mkspecs \
+    qtremoteobjects-dev \
+    qtremoteobjects-mkspecs \
+    qtgamepad-dev \
+    qtgamepad-mkspecs \
+    qtlottie-dev \
+    qtlottie-mkspecs \
+    qtcoap-dev \
+    qtcoap-mkspecs \
 "
 QT5_PKGS = " \
     qtcharts \
@@ -186,16 +208,25 @@ QT5_PKGS = " \
     qtgraphicaleffects \
     qtlocation-plugins \
     qtmultimedia \
+    qtmultimedia-plugins \
     qtquickcontrols2 \
     qtsensors-plugins \
     qtserialbus \
+    qtserialport \
+    qtsystems \
     qtsvg \
     qtwebsockets-qmlplugins \
     qtvirtualkeyboard \
     qtxmlpatterns \
-    qtserialport \
     qtmqtt \
     qtwayland-plugins \
+    qtimageformats \
+    qtimageformats-plugins \
+    qtremoteobjects \
+    qtgamepad \
+    qtlottie \
+    qtcoap \
+    qtwebglplugin \
 "
 
 IMAGE_INSTALL += " \
@@ -219,19 +250,14 @@ IMAGE_INSTALL += " \
     ${QT_DEV_TOOLS} \
     ${QT5_DEV_PKGS} \
     ${QT5_PKGS} \
-    ${PYTHON_UTILS} \
+    ${MODULES_FILES} \
 "
-
-set_local_timezone() {
-    ln -sf /usr/share/zoneinfo/EST5EDT ${IMAGE_ROOTFS}/etc/localtime
-}
 
 disable_bootlogd() {
     echo BOOTLOGD_ENABLE=no > ${IMAGE_ROOTFS}/etc/default/bootlogd
 }
 
 ROOTFS_POSTPROCESS_COMMAND += " \
-    set_local_timezone ; \
     disable_bootlogd ; \
  "
 

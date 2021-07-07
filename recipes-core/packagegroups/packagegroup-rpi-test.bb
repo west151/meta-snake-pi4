@@ -11,6 +11,7 @@ OMXPLAYER  = "${@bb.utils.contains('MACHINE_FEATURES', 'vc4graphics', '', 'omxpl
 RDEPENDS_${PN} = "\
     ${OMXPLAYER} \
     bcm2835-tests \
+    bcm2835-dev \
     rpio \
     rpi-gpio \
     pi-blaster \
